@@ -690,7 +690,7 @@ function useScrollScenes(pathname: string) {
         document.querySelectorAll<HTMLElement>(".work-row figure, .who__portrait, .testimonial-slide img, .detail-cover, .detail-banner").forEach((node) => {
           node.classList.add("zoom-out");
         });
-        document.querySelectorAll<HTMLElement>(".hero__title, .quote-block h2, .footer-giant, .archive-hero h1, .detail-title").forEach((node) => {
+        document.querySelectorAll<HTMLElement>(".hero__title, .quote-block h2, .archive-hero h1, .detail-title").forEach((node) => {
           node.classList.add("tilt-3d");
         });
 
