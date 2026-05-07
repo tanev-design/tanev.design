@@ -3163,9 +3163,7 @@ body:has(.elite-page) {
   border-radius: 999px;
   background: var(--float-bg);
   color: var(--float-muted);
-  box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.38),
-    inset 0 1px 0 rgba(248, 248, 243, 0.08);
+  box-shadow: inset 0 1px 0 rgba(248, 248, 243, 0.08);
   transition:
     background 200ms ease,
     color 200ms ease,
@@ -3173,12 +3171,9 @@ body:has(.elite-page) {
 }
 
 .float-nav__trigger {
-  background:
-    radial-gradient(circle at 50% 20%, rgba(253, 73, 0, 0.16), transparent 42%),
-    #171111;
+  background: #171111;
   color: var(--float-ink);
   box-shadow:
-    0 18px 44px rgba(0, 0, 0, 0.42),
     0 0 0 1px rgba(253, 73, 0, 0.48),
     inset 0 1px 0 rgba(248, 248, 243, 0.08);
 }
@@ -3193,7 +3188,6 @@ body:has(.elite-page) {
   background: var(--float-bg-strong);
   color: var(--float-red);
   box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.42),
     0 0 0 1px rgba(253, 73, 0, 0.34),
     inset 0 1px 0 rgba(248, 248, 243, 0.08);
 }
@@ -3689,8 +3683,7 @@ body:has(.elite-page) main {
   isolation: isolate;
 }
 
-.elite-intro::before,
-.elite-intro::after {
+.elite-intro::before {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -3705,20 +3698,6 @@ body:has(.elite-page) main {
   background-size: 100% 242px, 242px 100%;
   mask-image: radial-gradient(circle at 58% 48%, #000 0 42%, transparent 72%);
   opacity: 0.72;
-}
-
-.elite-intro::after {
-  width: min(76vw, 920px);
-  aspect-ratio: 1;
-  right: clamp(-260px, -14vw, -90px);
-  top: 50%;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 43% 48%, rgba(253, 73, 0, 0.72), transparent 0 13%, rgba(253, 73, 0, 0.24) 25%, transparent 58%),
-    radial-gradient(circle, rgba(253, 73, 0, 0.26), transparent 64%);
-  filter: blur(22px);
-  transform: translateY(-50%);
-  opacity: 0.92;
 }
 
 .elite-intro__rail {
@@ -3869,21 +3848,11 @@ body:has(.elite-page) main {
     rgba(3, 3, 3, 0.76);
   box-shadow:
     0 0 0 1px rgba(253, 73, 0, 0.08),
-    0 0 20px rgba(253, 73, 0, 0.34),
-    0 0 54px rgba(253, 73, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .elite-intro__mark::before {
-  content: "";
-  position: absolute;
-  inset: -13px;
-  z-index: -1;
-  border-radius: inherit;
-  background:
-    radial-gradient(circle, rgba(253, 73, 0, 0.34), rgba(253, 73, 0, 0.12) 34%, transparent 70%);
-  filter: blur(10px);
-  opacity: 0.92;
+  content: none;
 }
 
 .elite-intro__panel p {
@@ -3964,8 +3933,7 @@ body:has(.elite-page) main {
     rgba(8, 7, 7, 0.72);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 28px 80px rgba(0, 0, 0, 0.38),
-    0 0 60px rgba(253, 73, 0, 0.08);
+    0 18px 42px rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(16px);
   aspect-ratio: 900 / 620;
   transition:
@@ -3988,8 +3956,7 @@ body:has(.elite-page) main {
   border-color: rgba(253, 73, 0, 0.32);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    0 34px 92px rgba(0, 0, 0, 0.46),
-    0 0 72px rgba(253, 73, 0, 0.18);
+    0 22px 48px rgba(0, 0, 0, 0.4);
 }
 
 .elite-intro__mockup--one {
