@@ -1,10 +1,15 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-export const alt = "Stoyan Tanev — Independent Web Designer in Plovdiv, Bulgaria";
+export const alt = "Tanev Design - design that ships";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const footerBackground = await readFile(join(process.cwd(), "public", "assets", "new footer background.png"), "base64");
+  const footerBackgroundSrc = `data:image/png;base64,${footerBackground}`;
+
   return new ImageResponse(
     (
       <div
@@ -16,30 +21,45 @@ export default function OpenGraphImage() {
           justifyContent: "space-between",
           background: "#050607",
           color: "#f7f4ed",
-          padding: 72,
+          padding: 66,
           fontFamily: "Inter, system-ui, sans-serif",
-          position: "relative"
+          position: "relative",
+          overflow: "hidden"
         }}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse renders local asset data URLs, not next/image components. */}
+        <img
+          src={footerBackgroundSrc}
+          width={1200}
+          height={630}
+          alt=""
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover"
+          }}
+        />
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "radial-gradient(circle at 80% 0%, rgba(232,36,26,0.22) 0%, rgba(232,36,26,0) 55%)",
+            background: "linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.36) 46%, rgba(0,0,0,0.08) 100%)",
             display: "flex"
           }}
         />
 
         <div
           style={{
+            position: "relative",
             display: "flex",
             alignItems: "center",
             gap: 14,
             fontSize: 22,
             letterSpacing: 4,
             textTransform: "uppercase",
-            color: "rgba(247,244,237,0.62)"
+            color: "rgba(247,244,237,0.76)"
           }}
         >
           <div
@@ -47,7 +67,7 @@ export default function OpenGraphImage() {
               width: 10,
               height: 10,
               borderRadius: 999,
-              background: "#e8241a",
+              background: "#fd4900",
               display: "flex"
             }}
           />
@@ -56,6 +76,7 @@ export default function OpenGraphImage() {
 
         <div
           style={{
+            position: "relative",
             display: "flex",
             flexDirection: "column",
             gap: 18,
@@ -66,36 +87,37 @@ export default function OpenGraphImage() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              fontSize: 88,
-              fontWeight: 700,
-              lineHeight: 1.02,
+              fontSize: 104,
+              fontWeight: 900,
+              lineHeight: 0.92,
               letterSpacing: -3,
               color: "#f7f4ed"
             }}
           >
-            <span style={{ display: "flex" }}>Independent&nbsp;</span>
-            <span style={{ display: "flex", color: "#e8241a" }}>Web Designer</span>
+            <span style={{ display: "flex" }}>Design&nbsp;</span>
+            <span style={{ display: "flex", color: "#fd4900" }}>that ships.</span>
           </div>
           <div
             style={{
               display: "flex",
-              fontSize: 32,
+              fontSize: 30,
               lineHeight: 1.3,
-              color: "rgba(247,244,237,0.74)",
-              maxWidth: 880
+              color: "rgba(247,244,237,0.82)",
+              maxWidth: 760
             }}
           >
-            Plovdiv, Bulgaria → Worldwide. One person, end-to-end. Custom builds, SEO, performance.
+            Custom websites for founders and small teams.
           </div>
         </div>
 
         <div
           style={{
+            position: "relative",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
             fontSize: 22,
-            color: "rgba(247,244,237,0.55)",
+            color: "rgba(247,244,237,0.68)",
             letterSpacing: 1
           }}
         >

@@ -18,9 +18,9 @@ export function Footer() {
               <span className="footer-rotate__word">FAST?</span>
             </div>
           </div>
-          <p className="footer-giant footer-talk" data-cursor="PLAY">
-            <HoverSwapText>{"LET'S TALK"}</HoverSwapText>
-          </p>
+          <a className="footer-giant footer-talk" href="#contact" data-contact-trigger data-cursor="CONTACT">
+            <HoverSwapText>{"LET'S COLLAB"}</HoverSwapText>
+          </a>
         </div>
       </div>
 

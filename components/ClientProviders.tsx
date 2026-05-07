@@ -558,11 +558,11 @@ function useIntroSplitHighlight(pathname: string) {
         aria: "auto"
       });
       gsap.set(split.words, {
-        color: (_index, target) => (target.closest(".elite-intro__accent") ? "rgba(255, 74, 49, 0.18)" : "rgba(248, 248, 243, 0.18)"),
+        color: (_index, target) => (target.closest(".elite-intro__accent") ? "rgba(253, 73, 0, 0.18)" : "rgba(248, 248, 243, 0.18)"),
         opacity: 0.18
       });
       const tween = gsap.to(split.words, {
-        color: (_index, target) => (target.closest(".elite-intro__accent") ? "#ff4a31" : "#f8f8f3"),
+        color: (_index, target) => (target.closest(".elite-intro__accent") ? "#fd4900" : "#f8f8f3"),
         opacity: 1,
         ease: "none",
         stagger: { each: 0.1, from: "start" },
