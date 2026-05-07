@@ -106,7 +106,7 @@ export default async function OpenGraphImage() {
               maxWidth: 760
             }}
           >
-            Custom websites for founders and small teams.
+            Premium websites. One person. Every detail considered.
           </div>
         </div>
 

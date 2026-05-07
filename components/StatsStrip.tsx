@@ -67,7 +67,7 @@ export function StatsStrip() {
       </span>
       <div className="stat reveal">
         <Counter target={2026} />
-        <p>ACTIVE STUDIO YEAR</p>
+        <p>INDEPENDENT YEAR</p>
       </div>
     </section>
   );

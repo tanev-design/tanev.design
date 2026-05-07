@@ -47,7 +47,7 @@ export const site = {
   timezone: "Europe/Sofia",
   url: "https://tanev.design",
   description:
-    "Website design, UI/UX, SEO, and fast front-end builds for local businesses in Bulgaria and the EU."
+    "Premium web design, UI/UX, SEO, and front-end builds by Stoyan Tanev."
 };
 
 export const contactHref = "#contact";
@@ -94,21 +94,21 @@ const projectBlocks = (name: string): [DetailBlock, DetailBlock, DetailBlock] =>
   {
     eyebrow: "CONTEXT",
     body: [
-      `${name} needed a site that felt direct, memorable, and easy to act on without turning into a generic template.`,
-      "The work focused on sharpening the first impression, reducing friction, and giving the brand a clear visual system."
+      `${name} needed a site people could trust quickly.`,
+      "Clear offer. Strong first impression. No template feel."
     ]
   },
   {
     eyebrow: "METHOD",
     body: [
-      "I mapped the visitor decisions first, then designed the key sections around proof, speed, and one obvious next step.",
-      "The build uses reusable sections, responsive image ratios, and measured motion so the interface feels alive without getting in the way."
+      "I mapped the key decisions first.",
+      "Then I shaped the layout, proof, motion, and responsive details around one clear next step."
     ]
   },
   {
     eyebrow: "OUTCOME",
     body: [
-      "The final direction is lean, cinematic, and commercially clear. Every scroll either explains the offer or moves the visitor closer to contact."
+      "The result is lean, sharp, and easy to act on."
     ]
   }
 ];
@@ -211,25 +211,25 @@ export const projects: Project[] = [
   }
 ];
 
-const serviceBlocks = (service: string, fit: string, outcome: string): [DetailBlock, DetailBlock, DetailBlock] => [
+const serviceBlocks = (fit: string, outcome: string): [DetailBlock, DetailBlock, DetailBlock] => [
   {
-    eyebrow: "WHAT IT SOLVES",
+    eyebrow: "WHAT IT FIXES",
     body: [
-      `${service} is for ${fit}.`,
-      `The work is framed around ${outcome}, so the site has a clear business purpose instead of just another section list.`
+      fit,
+      outcome
     ]
   },
   {
-    eyebrow: "HOW WE WORK",
+    eyebrow: "HOW I BUILD",
     body: [
-      "We start with the audience, offer, proof, and the action the page needs to earn.",
-      "Then I shape the layout, responsive behavior, SEO structure, and launch details in focused loops so the final site is clear, fast, and useful."
+      "I start with the offer, audience, proof, and action.",
+      "Then I design and build the page until the next step feels obvious."
     ]
   },
   {
     eyebrow: "WHAT YOU GET",
     body: [
-      "You get a responsive, maintainable web presence with clean visuals, semantic structure, performance care, and direct support from the person designing and building it."
+      "A clear, responsive, SEO-ready website. Designed and built by one person."
     ]
   }
 ];
@@ -240,23 +240,22 @@ export const services: Service[] = [
     label: "WEBSITE DESIGN",
     title: "Website Design",
     compactTitle: "WEBDESIGN",
-    summary: "Clean, modern, brand-aligned visuals for local businesses that need to look trustworthy fast.",
-    deliverables: ["Visual direction", "Page layout", "Brand-aligned UI"],
+    summary: "A sharper first impression. Clear visuals. Fast trust.",
+    deliverables: ["Visual direction", "Page layout", "UI system"],
     price: "custom quote",
-    subtitle: "Clean, modern visuals shaped around your offer, audience, and brand.",
+    subtitle: "A website that looks right before anyone reads a word.",
     categoryLabel: "DELIVERABLES",
     categories: ["VISUAL DESIGN", "LOCAL BUSINESS", "TRUST"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "Local businesses",
     cover: image.style.websiteDesign,
     visual: image.style.websiteDesign,
     detailImages: [image.style.websiteDesign, image.style.tools],
     blocks: serviceBlocks(
-      "Website design",
-      "local businesses that need a professional first impression online",
-      "clear trust, brand alignment, and a page visitors can understand quickly"
+      "Your site looks generic, dated, or hard to trust.",
+      "I give it a clear visual system and a stronger first impression."
     ),
-    ctaLabel: "PLAN A WEBSITE",
+    ctaLabel: "PLAN SITE",
     ctaHref: contactHref,
     closingImage: image.style.why
   },
@@ -265,23 +264,22 @@ export const services: Service[] = [
     label: "UI/UX DESIGN",
     title: "UI UX Design",
     compactTitle: "UIUXDESIGN",
-    summary: "Intuitive layouts, user-flow optimization, and mobile-first experiences with one obvious next step.",
-    deliverables: ["User flow", "Mobile-first layouts", "Responsive UI"],
+    summary: "Cleaner flows. Easier choices. One clear next step.",
+    deliverables: ["User flow", "Mobile layout", "Responsive UI"],
     price: "custom quote",
-    subtitle: "Clear interfaces for websites that need to explain, guide, and convert.",
+    subtitle: "Less friction. More clarity.",
     categoryLabel: "DELIVERABLES",
     categories: ["UX", "INTERFACE", "MOBILE FIRST"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "Service websites",
     cover: image.style.uiux,
     visual: image.style.uiux,
     detailImages: [image.style.uiux, image.style.responsive],
     blocks: serviceBlocks(
-      "UI/UX design",
-      "businesses, startups, and service teams with pages that need better flow",
-      "less friction, better scanning, and a smoother path from interest to contact"
+      "People land on the page, but the next step is not obvious.",
+      "I tighten the flow so visitors understand, scan, and act."
     ),
-    ctaLabel: "DESIGN THE FLOW",
+    ctaLabel: "SHAPE FLOW",
     ctaHref: contactHref,
     closingImage: image.style.faq
   },
@@ -290,23 +288,22 @@ export const services: Service[] = [
     label: "SEO OPTIMIZATION",
     title: "SEO Optimization",
     compactTitle: "SEOOPTIMIZATION",
-    summary: "On-page SEO, semantic HTML, Core Web Vitals, and fast load times so your site can be found and used.",
-    deliverables: ["On-page SEO", "Semantic HTML", "Core Web Vitals"],
+    summary: "Search-ready pages with clean structure, speed, and metadata.",
+    deliverables: ["On-page SEO", "Semantic HTML", "Speed"],
     price: "custom quote",
-    subtitle: "SEO that helps your site get found on Google and feel fast once visitors arrive.",
+    subtitle: "Built to be found. Built to feel fast.",
     categoryLabel: "DELIVERABLES",
     categories: ["ON-PAGE SEO", "PERFORMANCE", "SEARCH"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "Local search",
     cover: image.style.seo,
     visual: image.style.seo,
     detailImages: [image.style.seo, image.style.blogSeo],
     blocks: serviceBlocks(
-      "SEO optimization",
-      "local businesses that rely on search visibility, fast pages, and clear service content",
-      "stronger technical foundations, cleaner metadata, and pages search engines can read"
+      "Search engines cannot read what your business does.",
+      "I clean up headings, metadata, content structure, and technical basics."
     ),
-    ctaLabel: "IMPROVE SEO",
+    ctaLabel: "FIX SEO",
     ctaHref: contactHref,
     closingImage: image.style.performance
   },
@@ -315,23 +312,22 @@ export const services: Service[] = [
     label: "LANDING PAGES",
     title: "Landing Pages",
     compactTitle: "LANDINGPAGES",
-    summary: "High-conversion single-page sites for campaigns, services, products, and focused offers.",
-    deliverables: ["Offer structure", "Single-page build", "Conversion CTA"],
+    summary: "One offer. One page. One action.",
+    deliverables: ["Offer structure", "One-page build", "CTA path"],
     price: "custom quote",
-    subtitle: "Focused one-page websites built around one offer and one clear action.",
+    subtitle: "A focused page for a focused offer.",
     categoryLabel: "DELIVERABLES",
     categories: ["CAMPAIGN", "CONVERSION", "LAUNCH"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "Campaigns",
     cover: image.style.landingPage,
     visual: image.style.landingPage,
     detailImages: [image.style.landingPage, image.style.blogLanding],
     blocks: serviceBlocks(
-      "Landing pages",
-      "local campaigns, product launches, and service offers that need a focused page",
-      "one sharp message, one conversion path, and a fast route from visitor attention to enquiry"
+      "You need a page for one launch, service, or campaign.",
+      "I strip the noise and build around the action that matters."
     ),
-    ctaLabel: "BUILD A LANDING PAGE",
+    ctaLabel: "BUILD PAGE",
     ctaHref: contactHref,
     closingImage: image.style.uiux
   },
@@ -340,23 +336,22 @@ export const services: Service[] = [
     label: "PERFORMANCE",
     title: "Performance Optimization",
     compactTitle: "PERFORMANCE",
-    summary: "Audits and speed improvements focused on Lighthouse scores, loading behavior, and smoother browsing.",
-    deliverables: ["Audit", "Speed fixes", "Lighthouse review"],
+    summary: "Speed fixes for lighter, faster, smoother pages.",
+    deliverables: ["Audit", "Speed fixes", "Core Web Vitals"],
     price: "custom quote",
-    subtitle: "Speed and performance care for websites that need to feel lighter and load faster.",
+    subtitle: "Make the site feel instant.",
     categoryLabel: "DELIVERABLES",
     categories: ["AUDITS", "SPEED", "LIGHTHOUSE"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "Existing websites",
     cover: image.style.performance,
     visual: image.style.performance,
     detailImages: [image.style.performance, image.style.seo],
     blocks: serviceBlocks(
-      "Performance optimization",
-      "existing websites that feel slow, heavy, or unstable across devices",
-      "faster loading, better Lighthouse signals, and fewer technical distractions for visitors"
+      "Your site feels heavy or unstable.",
+      "I find the slow parts and clean up what visitors feel first."
     ),
-    ctaLabel: "AUDIT PERFORMANCE",
+    ctaLabel: "SPEED IT UP",
     ctaHref: contactHref,
     closingImage: image.style.tools
   },
@@ -365,23 +360,22 @@ export const services: Service[] = [
     label: "RESPONSIVE DESIGN",
     title: "Responsive Design",
     compactTitle: "RESPONSIVEDESIGN",
-    summary: "Pixel-careful layouts that hold up across mobile, tablet, desktop, and modern browsers.",
+    summary: "Polished layouts across phone, tablet, and desktop.",
     deliverables: ["Breakpoint polish", "Browser checks", "Responsive QA"],
     price: "custom quote",
-    subtitle: "Responsive web design that keeps the experience polished across devices and browsers.",
+    subtitle: "Same site. Every screen. Still sharp.",
     categoryLabel: "DELIVERABLES",
     categories: ["MOBILE", "BROWSERS", "QA"],
-    typeLabel: "Project Fit",
+    typeLabel: "Best For",
     typeValue: "All launches",
     cover: image.style.responsive,
     visual: image.style.responsive,
     detailImages: [image.style.responsive, image.style.uiux],
     blocks: serviceBlocks(
-      "Responsive design",
-      "businesses that need the site to look professional on phones, tablets, laptops, and large screens",
-      "layouts that stay readable, usable, and visually consistent wherever people open them"
+      "Your layout breaks, crowds, or loses polish on smaller screens.",
+      "I tune the interface so it holds up everywhere."
     ),
-    ctaLabel: "FIX RESPONSIVE DESIGN",
+    ctaLabel: "FIX LAYOUT",
     ctaHref: contactHref,
     closingImage: image.style.responsive
   }
@@ -391,21 +385,20 @@ const blogBlocks = (topic: string): [DetailBlock, DetailBlock, DetailBlock] => [
   {
     eyebrow: "FRAME",
     body: [
-      `${topic} is a practical note for teams who want their site to feel clear before it feels clever.`,
-      "The strongest sites usually come from fewer decisions made with more discipline."
+      `${topic} is a short note on making websites clearer.`,
+      "Less noise. Better decisions."
     ]
   },
   {
     eyebrow: "DETAILS",
     body: [
-      "The article breaks the idea into page structure, interface behavior, and the parts that affect conversion.",
-      "It is written from the builder side: what I look for, what I remove, and what I test before launch."
+      "I break down what to keep, what to remove, and what to test before launch."
     ]
   },
   {
     eyebrow: "TAKEAWAY",
     body: [
-      "Good web design is not a style layer. It is the visible edge of a business decision made clearly."
+      "Good design makes the decision feel obvious."
     ]
   }
 ];
@@ -415,7 +408,7 @@ export const blogs: BlogPost[] = [
     slug: "ux-mistakes",
     title: "UX Mistakes",
     compactTitle: "UXMISTAKES",
-    subtitle: "Small interface decisions that quietly cost trust.",
+    subtitle: "Small choices that cost trust.",
     date: "2026-04-12",
     readTime: "6 min",
     categoryLabel: "TOPICS",
@@ -433,7 +426,7 @@ export const blogs: BlogPost[] = [
     slug: "user-flow",
     title: "User Flow",
     compactTitle: "USERFLOW",
-    subtitle: "How to make the next step obvious without making the page loud.",
+    subtitle: "Make the next step obvious.",
     date: "2026-03-28",
     readTime: "5 min",
     categoryLabel: "TOPICS",
@@ -451,7 +444,7 @@ export const blogs: BlogPost[] = [
     slug: "seo-basics",
     title: "SEO Basics",
     compactTitle: "SEOBASICS",
-    subtitle: "The page details that help local businesses show up and load fast.",
+    subtitle: "Small page details. Better search signals.",
     date: "2026-03-04",
     readTime: "7 min",
     categoryLabel: "TOPICS",
@@ -469,7 +462,7 @@ export const blogs: BlogPost[] = [
     slug: "landing-vs-multipage",
     title: "Landing vs Multi-page",
     compactTitle: "LANDINGVSMULTIPAGE",
-    subtitle: "When a one-page site is enough, and when a business needs full site structure.",
+    subtitle: "One page or full site. Choose with intent.",
     date: "2026-02-18",
     readTime: "4 min",
     categoryLabel: "TOPICS",
@@ -542,58 +535,58 @@ export const blogs: BlogPost[] = [
 export const faqs = [
   {
     q: "How soon can a website start?",
-    a: "Most focused projects can begin within one to two weeks, depending on content readiness and scope."
+    a: "Usually within one to two weeks, if the scope and content are ready."
   },
   {
     q: "Do you only work with Bulgarian businesses?",
-    a: "No. I am based in Plovdiv and work with teams in Bulgaria, Europe, and remote-first markets."
+    a: "No. I work with clients in Bulgaria, Europe, and remote-first markets."
   },
   {
     q: "Can you redesign an existing website?",
-    a: "Yes. A redesign usually starts with a quick audit so we keep what already works and replace what slows people down."
+    a: "Yes. I start with a quick audit, keep what works, and fix what slows people down."
   },
   {
     q: "Do you handle copy and SEO basics?",
-    a: "Yes. I can shape on-page copy, metadata, semantic headings, internal structure, and launch essentials for search visibility."
+    a: "Yes. I can shape page copy, metadata, headings, structure, and launch SEO."
   },
   {
     q: "Do you build landing pages and multi-page sites?",
-    a: "Yes. A focused offer usually fits a single landing page, while restaurants, medical services, parks, cooperatives, and service businesses often need a multi-page structure."
+    a: "Yes. A focused offer fits one page. A broader business usually needs structure."
   },
   {
     q: "What happens after launch?",
-    a: "I offer support for fixes, analytics, new sections, performance checks, and careful iteration after the site is live."
+    a: "I can support fixes, analytics, new sections, speed checks, and careful iteration."
   }
 ];
 
 export const testimonials = [
   {
-    quote: "WEBSITE DESIGN FOR LOCAL BUSINESSES THAT NEED A CLEAR, TRUSTWORTHY FIRST IMPRESSION.",
-    name: "Service Focus",
+    quote: "A SHARPER FIRST IMPRESSION. BUILT FOR TRUST.",
+    name: "Focus",
     role: "Website design",
     avatar: image.style.websiteDesign
   },
   {
-    quote: "UI/UX THAT MAKES THE NEXT STEP OBVIOUS ON MOBILE, TABLET, AND DESKTOP.",
-    name: "Service Focus",
+    quote: "CLEAR FLOWS. FEWER DOUBTS. BETTER ACTION.",
+    name: "Focus",
     role: "UI/UX design",
     avatar: image.style.uiux
   },
   {
-    quote: "SEO FOUNDATIONS BUILT INTO THE PAGE STRUCTURE INSTEAD OF ADDED AS AN AFTERTHOUGHT.",
-    name: "Service Focus",
+    quote: "SEO BUILT INTO THE STRUCTURE, NOT ADDED LATER.",
+    name: "Focus",
     role: "SEO optimization",
     avatar: image.style.seo
   },
   {
-    quote: "LANDING PAGES AND BUSINESS WEBSITES SHAPED AROUND ONE CLEAN CONVERSION PATH.",
-    name: "Service Focus",
+    quote: "ONE OFFER. ONE PAGE. ONE CLEAR PATH.",
+    name: "Focus",
     role: "Conversion pages",
     avatar: image.style.landingPage
   },
   {
-    quote: "PERFORMANCE, ACCESSIBILITY, AND RESPONSIVE QA INCLUDED BEFORE LAUNCH.",
-    name: "Service Focus",
+    quote: "FAST, ACCESSIBLE, RESPONSIVE BEFORE LAUNCH.",
+    name: "Focus",
     role: "Technical polish",
     avatar: image.style.responsive
   }
@@ -601,10 +594,10 @@ export const testimonials = [
 
 export const awards = [
   ["SERVICE", "Website Design", "Brand-aligned visuals", image.style.websiteDesign],
-  ["SERVICE", "UI/UX Design", "Mobile-first user flows", image.style.uiux],
-  ["SERVICE", "SEO Optimization", "Semantic pages and speed", image.style.seo],
-  ["SERVICE", "Landing Pages", "Focused single-page campaigns", image.style.landingPage],
-  ["SERVICE", "Business Websites", "Multi-page local business sites", image.style.businessWebsite]
+  ["SERVICE", "UI/UX Design", "Clear user flows", image.style.uiux],
+  ["SERVICE", "SEO Optimization", "Search-ready structure", image.style.seo],
+  ["SERVICE", "Landing Pages", "Focused offer pages", image.style.landingPage],
+  ["SERVICE", "Business Websites", "Clear site systems", image.style.businessWebsite]
 ] as const;
 
 export const education = [
@@ -626,7 +619,7 @@ export const education = [
   {
     era: "2025 - NOW",
     items: [
-      ["Tanev Design", "Independent studio practice"],
+      ["Tanev Design", "Independent practice"],
       ["React and Vite Builds", "Custom front-end websites"],
       ["Performance and Launch Support", "Core Web Vitals, analytics, and iteration"]
     ]
@@ -637,13 +630,13 @@ export const pricing = [
   {
     name: "LANDING PAGE",
     monthly: 0,
-    description: "A focused single-page site for a campaign, product, or service offer.",
+    description: "One focused page for one clear offer.",
     features: ["Offer structure", "One-page design", "Responsive build", "SEO basics"]
   },
   {
     name: "BUSINESS WEBSITE",
     monthly: 0,
-    description: "A multi-page website for local businesses with clear service structure.",
+    description: "A clear site system for a serious business.",
     features: [
       "UX structure",
       "Custom visual system",
@@ -657,7 +650,7 @@ export const pricing = [
   {
     name: "OPTIMIZATION",
     monthly: 0,
-    description: "A focused audit and improvement pass for an existing website.",
+    description: "A focused pass for speed, structure, and polish.",
     features: [
       "Performance audit",
       "Core Web Vitals",

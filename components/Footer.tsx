@@ -14,12 +14,12 @@ export function Footer() {
         <div>
           <div className="eyebrow footer-rotate" role="text">
             <div className="footer-rotate__line">
-              <span className="footer-rotate__static">READY TO BUILD SOMETHING</span>
-              <span className="footer-rotate__word">FAST?</span>
+              <span className="footer-rotate__static">READY FOR A SITE</span>
+              <span className="footer-rotate__word">THAT WORKS?</span>
             </div>
           </div>
           <a className="footer-giant footer-talk" href="#contact" data-contact-trigger data-cursor="CONTACT">
-            <HoverSwapText>{"LET'S COLLAB"}</HoverSwapText>
+            <HoverSwapText>{"LET'S TALK"}</HoverSwapText>
           </a>
         </div>
       </div>

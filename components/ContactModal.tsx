@@ -103,7 +103,7 @@ export function ContactModal() {
 
         <div className="contact-modal__head">
           <p className="elite-kicker">Contact</p>
-          <h2 id="contact-modal-title">Tell me what you want to build.</h2>
+          <h2 id="contact-modal-title">Tell me what you need.</h2>
         </div>
 
         <form className="contact-modal__form" onSubmit={onSubmit}>
@@ -138,7 +138,7 @@ export function ContactModal() {
 
           <label>
             <span>Message</span>
-            <textarea name="message" rows={6} placeholder="What are we building?" required />
+            <textarea name="message" rows={6} placeholder="What should I build?" required />
           </label>
 
           <label className="contact-modal__trap" aria-hidden="true">
@@ -147,7 +147,7 @@ export function ContactModal() {
           </label>
 
           <button className="elite-pill elite-pill--light contact-modal__submit" type="submit" disabled={state === "sending"}>
-            {state === "sending" ? "Sending" : "Send message"}
+            {state === "sending" ? "Sending" : "Send inquiry"}
             {state === "sending" ? <Send size={16} aria-hidden="true" /> : <ArrowUpRight size={16} aria-hidden="true" />}
           </button>
 

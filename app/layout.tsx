@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }]
   },
   title: {
-    default: "Independent Web Designer in Plovdiv, Bulgaria — Tanev Design",
-    template: "%s — Tanev Design"
+    default: "Stoyan Tanev - Independent Web Designer",
+    template: "%s - Tanev Design"
   },
   description:
-    "Custom website design and development for founders and small businesses across Bulgaria and the EU. One person, end-to-end. Fast, accessible, SEO-ready builds.",
+    "Premium websites by Stoyan Tanev. One person. Every detail considered. Design, build, SEO, and launch.",
   keywords: [
     "web designer Bulgaria",
     "freelance web designer Plovdiv",
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
   category: "Web Design",
   formatDetection: { email: false, telephone: false, address: false },
   openGraph: {
-    title: "Independent Web Designer in Plovdiv, Bulgaria — Tanev Design",
+    title: "Stoyan Tanev - Independent Web Designer",
     description:
-      "Custom website design and development for founders and small businesses across Bulgaria and the EU. One person, end-to-end.",
+      "Premium websites by one person. Design, build, SEO, and launch.",
     url: site.url,
     siteName: "tanev.design",
     locale: "en_US",
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@tanevdesign",
     creator: "@tanevdesign",
-    title: "Independent Web Designer in Plovdiv, Bulgaria — Tanev Design",
+    title: "Stoyan Tanev - Independent Web Designer",
     description:
-      "Custom website design and development for founders and small businesses across Bulgaria and the EU."
+      "Premium websites by one person. Every detail considered."
   },
   robots: {
     index: true,
@@ -108,10 +108,10 @@ const jsonLd = [
     name: "Tanev Design",
     alternateName: "tanev.design",
     description:
-      "Independent web designer and developer based in Plovdiv, Bulgaria. Custom website design, UI/UX, SEO, and front-end development for founders and small businesses across the EU.",
+      "Independent web designer and developer based in Plovdiv, Bulgaria. Premium websites, UI/UX, SEO, and front-end builds. One person, end to end.",
     url: site.url,
     image: `${site.url}/assets/newherowithbackground.png?v=masked-hero-20260429`,
-    priceRange: "€€",
+    priceRange: "EUR EUR",
     founder: { "@type": "Person", "@id": `${site.url}/#stoyan` },
     areaServed: ["Bulgaria", "European Union", "Worldwide"],
     address: {
