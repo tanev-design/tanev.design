@@ -234,6 +234,352 @@ const serviceBlocks = (fit: string, outcome: string): [DetailBlock, DetailBlock,
   }
 ];
 
+const websiteDesignBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "Most small-business websites look identical: a stock-photo hero, three vague service cards, and a contact form nobody fills out. Visitors land, scan for two seconds, and bounce — not because the offer is bad, but because the visual language doesn't earn trust on a 2026 web.",
+      "Generic sites tell a generic story. Yours doesn't have to."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "Every project starts with one question: what is the one thing this site must do? Quote requests, bookings, brand credibility — pick one, design every pixel around it.",
+      "I build a small custom visual system per project: a single display typeface paired with a workhorse body font, two or three calibrated colors, a spacing scale, and a motion language. No themes. No templates. Each component earns its place.",
+      "Imagery gets curated, never decorated. If a stock photo doesn't move the story forward, it doesn't ship."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "A complete Figma file with every section, state, and breakpoint, plus a production-ready Next.js or Webflow build (your call).",
+      "Custom favicon and OG share image. Animation tokens. A short Loom walkthrough so you can edit copy confidently after launch.",
+      "Two rounds of revision are baked in. After that, weekly retainers are available."
+    ]
+  }
+];
+
+const uiuxBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "Traffic isn't usually the issue. The issue is friction: too many choices, unclear next steps, forms that ask for too much, mobile layouts that punish thumbs.",
+      "Beautiful designs that don't convert are wallpaper. The job is to make the right action feel inevitable."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "I map the journey from first click to completed action — every page, every CTA, every drop-off point. Heatmaps and session recordings tell me where users hesitate.",
+      "Mobile-first, always. I design phone-width before desktop because that's where most of your traffic actually lives. Tap targets get sized for thumbs, not mice. Forms get shorter. Decisions get fewer.",
+      "Then accessibility: WCAG AA contrast, focus rings, keyboard navigation, ARIA where it matters. Not a checkbox — a default."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "User flow diagrams, low-fi wireframes, and a clickable prototype before a single pixel of final UI is drawn.",
+      "Component library in Figma with hover, focus, active, disabled, and error states defined.",
+      "A short usability test with 3 real users before launch, recorded and annotated."
+    ]
+  }
+];
+
+const seoBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "Google can't read what your site doesn't say. Most small-business sites bury their actual service behind clever taglines, decorative headings, and JavaScript that crawlers stumble over.",
+      "Worse — image-heavy hero sections push critical text below the fold, and slow Largest Contentful Paint quietly tanks rankings."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "I start with keyword research grounded in what your actual customers type — not what marketing decks suggest. Local intent, commercial intent, informational intent — each gets its own page.",
+      "Then technical SEO: semantic HTML, proper heading hierarchy, structured data (JSON-LD for LocalBusiness, Service, FAQ, Article), Open Graph tags, sitemap, robots.txt, canonical URLs.",
+      "Core Web Vitals get tuned: LCP under 2.5s, INP under 200ms, CLS near zero. Lighthouse green across all four pillars before launch."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "Search Console and Analytics 4 connected and verified. A 90-day ranking baseline so you can measure what changes.",
+      "On-page audit document covering every URL: title, meta, headings, internal links, image alt text, schema.",
+      "A 6-page content brief for blog posts that target the keywords you're closest to ranking for."
+    ]
+  }
+];
+
+const landingPageBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "A homepage tries to serve everyone. A landing page serves exactly one visitor — the one ready to act on one offer.",
+      "Mixing the two is the most common waste of paid ad spend I see. You pay for traffic, then send it to a page that talks about five other things."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "Single offer. Single audience. Single CTA, repeated 3–5 times down the page in different voices.",
+      "Above the fold: headline that names the outcome, subhead that names the audience, primary button, and one piece of social proof. That's it.",
+      "Below: objection-handling sections — pricing transparency, FAQ, testimonials, guarantee, comparison vs. doing nothing. Each block exists because a real prospect would otherwise ask the question.",
+      "Speed obsessed: under 1.5s LCP on 4G. Conversion is fragile — a single slow render kills it."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "A standalone page on your domain or a subdomain (your choice), wired to your CRM or email tool with hidden UTM tracking.",
+      "Two headline variants and two CTA variants built and A/B testable from day one.",
+      "Heatmap and session recording integration so you can watch real visitors and iterate."
+    ]
+  }
+];
+
+const performanceBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "Every 100ms of load time costs roughly 1% of conversions, and Google has been ranking on Core Web Vitals since 2021.",
+      "Most slowness isn't one big problem — it's twenty small ones: oversized hero images, render-blocking scripts, layout shifts from late-loading fonts, third-party tags that drag in megabytes of analytics."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "I start with a full Lighthouse + WebPageTest + CrUX audit. Field data beats lab data — I want to see what real users on real phones are experiencing.",
+      "Image pipeline gets rebuilt: modern formats (AVIF/WebP), responsive srcset, lazy-loading below the fold, eager-loading the LCP hero, blurred placeholders.",
+      "JavaScript gets ruthlessly audited. Remove what isn't earning its weight. Defer or async what can wait. Move the rest behind interaction. Self-host critical fonts to kill CLS.",
+      "Server response, caching headers, and CDN config get tuned last — usually the lowest-leverage and highest-effort fix."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "Before/after Lighthouse reports and a CrUX trend chart you can show stakeholders.",
+      "A documented performance budget — JS bytes, image bytes, third-party count — so future changes can't quietly regress.",
+      "Monitoring hooked up: real-user metrics streaming into Search Console so you'll know within days if something breaks."
+    ]
+  }
+];
+
+const responsiveBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE PROBLEM",
+    body: [
+      "Over 60% of B2C traffic is mobile, but most sites still feel like the phone view was an afterthought — squeezed desktop columns, overflowing menus, tap targets that miss.",
+      "And it's not just phones. Foldables, tablets in landscape, ultra-wide monitors, in-app webviews — each has its own quirks, and your site has to look intentional on every one."
+    ]
+  },
+  {
+    eyebrow: "MY APPROACH",
+    body: [
+      "Fluid typography (clamp-based) so type scales smoothly between breakpoints rather than jumping at fixed widths.",
+      "Container queries where they help — components that respond to their own slot, not just viewport size.",
+      "I test on real devices: physical iPhone, physical Android, iPad in both orientations, plus BrowserStack for the long tail (Samsung Internet, Brave iOS, in-app Instagram browser, Safari 15).",
+      "Touch states get designed alongside hover states — they aren't the same interaction."
+    ]
+  },
+  {
+    eyebrow: "WHAT YOU GET",
+    body: [
+      "Documented breakpoint system in Figma and code: mobile (375), tablet (768), laptop (1024), desktop (1440), wide (1920).",
+      "Cross-browser QA report with screenshots from 12+ device/browser combinations.",
+      "A short style guide on accessibility patterns: focus rings, skip links, reduced-motion, prefers-color-scheme."
+    ]
+  }
+];
+
+const uxMistakesBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "I've audited hundreds of small-business sites in the last three years, and the same UX mistakes show up over and over. None of them are about visual design — they're about decision-making.",
+      "Pretty doesn't convert. Clear converts. Here are the seven mistakes I see most often, and how to fix each one in an afternoon."
+    ]
+  },
+  {
+    eyebrow: "THE SEVEN MISTAKES",
+    body: [
+      "1. Carousel heroes. Nobody reads slide 2. Pick one message and commit.",
+      "2. Vague CTAs. \"Learn more\" tells me nothing. \"Get a quote in 24 hours\" sets an expectation.",
+      "3. Contact forms with 8+ fields. Every optional field cuts completion by ~5%. Ask for name, email, and one question. Get the rest in the follow-up.",
+      "4. Hidden pricing. If you can't share pricing, share starting points. \"Projects from €3,500\" filters serious leads.",
+      "5. Auto-playing video with sound. Don't.",
+      "6. Animation everywhere. Motion should reward attention, not demand it. Reserve animation for state changes.",
+      "7. No social proof above the fold. One real client name beats five generic testimonials."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Every UX decision is a tradeoff between what you want to say and what the visitor wants to know. The visitor wins, every time.",
+      "Audit your site against this list this week. If any one fix moves a number, you'll know what to do next."
+    ]
+  }
+];
+
+const userFlowBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "User flow isn't a diagram in Figma. It's the actual answer to a simple question: when someone lands on your site, what's the single most important next step, and how obvious is it?",
+      "Most sites have eight equal next-steps competing for attention. The cursor hovers, then leaves."
+    ]
+  },
+  {
+    eyebrow: "THE METHOD",
+    body: [
+      "Step 1 — Define one primary action per page. Homepage: book a call. Service page: get a quote. Blog post: subscribe.",
+      "Step 2 — Audit current paths. Open Analytics, look at the top 5 landing pages, and ask: where do users go next? If the answer is \"home page\" or \"exit,\" the flow is broken.",
+      "Step 3 — Reduce decisions. Every additional link is a fork in the road. Cut secondary navigation on landing pages. Anchor CTAs that follow the scroll.",
+      "Step 4 — Test with real humans. Five quick usability tests will surface the friction faster than any analytics dashboard. Watch them, don't ask them."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "A great user flow feels like a conversation, not a maze. Each page answers one question and points to the next one.",
+      "If you can describe the ideal flow in three sentences, your visitors can follow it. If you can't, neither can they."
+    ]
+  }
+];
+
+const seoBasicsBlogBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "SEO in 2026 isn't about gaming algorithms. Google has gotten very good at ranking pages that actually answer questions clearly and load fast.",
+      "Most of the wins for small businesses come from getting the boring fundamentals right, not from clever tricks."
+    ]
+  },
+  {
+    eyebrow: "THE FOUR ESSENTIALS",
+    body: [
+      "1. Title tag + meta description that name the search intent. Not your tagline — what the user typed.",
+      "2. One H1 per page, matching the search query. H2s for sub-sections. Don't skip heading levels.",
+      "3. Internal links with descriptive anchor text. \"Read our pricing\" beats \"click here.\" Link from high-traffic pages to high-value pages.",
+      "4. Structured data — JSON-LD schema for LocalBusiness, Service, FAQ. It's the difference between a plain blue link and a rich snippet with stars, hours, and FAQ accordion in the SERP."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Do these four things well and you'll outrank 70% of competitors who don't.",
+      "Then add Core Web Vitals tuning, original content with first-hand experience, and consistent publishing. That's the whole game."
+    ]
+  }
+];
+
+const landingVsMultipageBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "Should this be a landing page or a full site? The wrong answer wastes either budget or conversions.",
+      "It's not about size — it's about intent. Are you serving one purchase decision or building long-term brand equity?"
+    ]
+  },
+  {
+    eyebrow: "THE DECISION RULES",
+    body: [
+      "Choose a landing page when: you're driving paid traffic to one offer, the buying decision happens in a single session, social proof + offer + CTA is all the prospect needs.",
+      "Choose a multi-page site when: visitors come from multiple sources with different questions, the sales cycle is longer than a week, brand credibility matters more than immediate conversion, you'll publish content over time.",
+      "Some businesses need both — a multi-page brand site, plus dedicated landing pages per campaign. They don't conflict, they compound."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Don't let \"a website\" become a default. Decide what the page is for, then choose the architecture that serves it.",
+      "If you can't answer \"what one thing does this site do?\", you're not ready to build it yet."
+    ]
+  }
+];
+
+const logoBlogBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "A useful logo isn't art — it's identification. It has to survive at 16×16 pixels in a browser tab, at 24px on a mobile nav, and at 200px on a billboard. Most logos fail one of those tests.",
+      "If your mark only works at one size, you don't have a logo. You have an illustration."
+    ]
+  },
+  {
+    eyebrow: "WHAT MAKES IT WORK",
+    body: [
+      "Simplicity. Two or three shapes maximum. Detail dies first when scaled down.",
+      "One color version that still reads. If it only works in full color, it'll break on every printed receipt, embroidered uniform, and dark social avatar.",
+      "A clear silhouette. Hold up the negative space. Is the shape still recognizable? That's the silhouette test.",
+      "Distinctness. If your mark could be your competitor's mark with a different color, start over.",
+      "Timelessness over trend. Gradient meshes age. Geometric clarity doesn't."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Test your logo at 16×16, in black-and-white, and against three industry competitors side by side. Pass all three tests and you're set for a decade.",
+      "And remember: a great logo doesn't replace a brand. A brand is the experience around the mark."
+    ]
+  }
+];
+
+const cleanLayoutBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "Spacing isn't empty. It's the single most powerful tool in layout design — and the most consistently misused.",
+      "Most cramped sites aren't cramped because there's too much content. They're cramped because all the spacing is the same value."
+    ]
+  },
+  {
+    eyebrow: "THE PRINCIPLES",
+    body: [
+      "Use a modular spacing scale: 4, 8, 12, 16, 24, 32, 48, 64, 96px. Never use values outside the scale. Consistency reads as intent.",
+      "Related elements get small gaps. Unrelated elements get large gaps. Proximity is hierarchy.",
+      "Sections need to breathe. A safe rule: vertical section padding ≥ 1.5× your largest type. Anything less feels cluttered.",
+      "Line length matters. Body text stays between 50–75 characters per line. Wider feels editorial; narrower feels mobile.",
+      "Asymmetry is your friend. Centered everything = static. Off-axis layouts create tension and direction."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Reduce the layout to grayscale. If hierarchy still reads clearly, the structure is sound. If it doesn't, no amount of color will save it.",
+      "Whitespace is luxury. Cheap brands fill space. Premium brands earn it."
+    ]
+  }
+];
+
+const gridPlayBlocks: [DetailBlock, DetailBlock, DetailBlock] = [
+  {
+    eyebrow: "THE FRAME",
+    body: [
+      "A strict 12-column grid is a great starting point and a terrible ending point. Sites that snap to grid feel like spreadsheets.",
+      "The trick is using the grid as scaffolding, then deliberately breaking it where breaks tell the story."
+    ]
+  },
+  {
+    eyebrow: "THE TECHNIQUES",
+    body: [
+      "Asymmetric columns: pair a 7-col content block with a 4-col accent. The off-balance ratio reads as editorial, not careless.",
+      "Pull-out elements: let one image, quote, or number break out of its column. Use sparingly — once per scroll length, max.",
+      "Vertical rhythm: align horizontal elements to a baseline grid (multiples of 4 or 8). Even when columns vary, vertical alignment keeps it composed.",
+      "Negative space columns: leave an entire column empty next to dense content. The empty column is doing work.",
+      "Diagonal motion: rotate one element 3–6 degrees against a strict grid. The eye finds it instantly without feeling chaotic."
+    ]
+  },
+  {
+    eyebrow: "THE TAKEAWAY",
+    body: [
+      "Grids exist so you can break them on purpose. Set the rule, then earn the exception.",
+      "Look at any great editorial spread — Vanity Fair, The Gentlewoman, Apostrophe. The grid is invisible because it's doing exactly what it should: holding everything together while letting the content lead."
+    ]
+  }
+];
+
 export const services: Service[] = [
   {
     slug: "website-design",
@@ -251,10 +597,7 @@ export const services: Service[] = [
     cover: image.style.websiteDesign,
     visual: image.style.websiteDesign,
     detailImages: [image.style.websiteDesign, image.style.tools],
-    blocks: serviceBlocks(
-      "Your site looks generic, dated, or hard to trust.",
-      "I give it a clear visual system and a stronger first impression."
-    ),
+    blocks: websiteDesignBlocks,
     ctaLabel: "PLAN SITE",
     ctaHref: contactHref,
     closingImage: image.style.why
@@ -275,10 +618,7 @@ export const services: Service[] = [
     cover: image.style.uiux,
     visual: image.style.uiux,
     detailImages: [image.style.uiux, image.style.responsive],
-    blocks: serviceBlocks(
-      "People land on the page, but the next step is not obvious.",
-      "I tighten the flow so visitors understand, scan, and act."
-    ),
+    blocks: uiuxBlocks,
     ctaLabel: "SHAPE FLOW",
     ctaHref: contactHref,
     closingImage: image.style.faq
@@ -299,10 +639,7 @@ export const services: Service[] = [
     cover: image.style.seo,
     visual: image.style.seo,
     detailImages: [image.style.seo, image.style.blogSeo],
-    blocks: serviceBlocks(
-      "Search engines cannot read what your business does.",
-      "I clean up headings, metadata, content structure, and technical basics."
-    ),
+    blocks: seoBlocks,
     ctaLabel: "FIX SEO",
     ctaHref: contactHref,
     closingImage: image.style.performance
@@ -323,10 +660,7 @@ export const services: Service[] = [
     cover: image.style.landingPage,
     visual: image.style.landingPage,
     detailImages: [image.style.landingPage, image.style.blogLanding],
-    blocks: serviceBlocks(
-      "You need a page for one launch, service, or campaign.",
-      "I strip the noise and build around the action that matters."
-    ),
+    blocks: landingPageBlocks,
     ctaLabel: "BUILD PAGE",
     ctaHref: contactHref,
     closingImage: image.style.uiux
@@ -347,10 +681,7 @@ export const services: Service[] = [
     cover: image.style.performance,
     visual: image.style.performance,
     detailImages: [image.style.performance, image.style.seo],
-    blocks: serviceBlocks(
-      "Your site feels heavy or unstable.",
-      "I find the slow parts and clean up what visitors feel first."
-    ),
+    blocks: performanceBlocks,
     ctaLabel: "SPEED IT UP",
     ctaHref: contactHref,
     closingImage: image.style.tools
@@ -371,10 +702,7 @@ export const services: Service[] = [
     cover: image.style.responsive,
     visual: image.style.responsive,
     detailImages: [image.style.responsive, image.style.uiux],
-    blocks: serviceBlocks(
-      "Your layout breaks, crowds, or loses polish on smaller screens.",
-      "I tune the interface so it holds up everywhere."
-    ),
+    blocks: responsiveBlocks,
     ctaLabel: "FIX LAYOUT",
     ctaHref: contactHref,
     closingImage: image.style.responsive
@@ -417,7 +745,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.blogUx,
     detailImages: [image.style.blogUx, image.style.uiux],
-    blocks: blogBlocks("UX mistakes"),
+    blocks: uxMistakesBlocks,
     ctaLabel: "FIX THE FLOW",
     ctaHref: contactHref,
     closingImage: image.style.faq
@@ -435,7 +763,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.uiux,
     detailImages: [image.style.uiux, image.style.websiteDesign],
-    blocks: blogBlocks("User flow"),
+    blocks: userFlowBlocks,
     ctaLabel: "MAP A FLOW",
     ctaHref: contactHref,
     closingImage: image.style.responsive
@@ -453,7 +781,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.blogSeo,
     detailImages: [image.style.blogSeo, image.style.performance],
-    blocks: blogBlocks("SEO basics"),
+    blocks: seoBasicsBlogBlocks,
     ctaLabel: "IMPROVE SEO",
     ctaHref: contactHref,
     closingImage: image.style.seo
@@ -471,7 +799,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.blogLanding,
     detailImages: [image.style.landingPage, image.style.businessWebsite],
-    blocks: blogBlocks("Landing page vs multi-page"),
+    blocks: landingVsMultipageBlocks,
     ctaLabel: "CHOOSE THE RIGHT SITE",
     ctaHref: contactHref,
     closingImage: image.style.blogLanding
@@ -489,7 +817,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.websiteDesign,
     detailImages: [image.style.websiteDesign, image.style.businessWebsite],
-    blocks: blogBlocks("Logo basics"),
+    blocks: logoBlogBlocks,
     ctaLabel: "SHARPEN A BRAND",
     ctaHref: contactHref,
     closingImage: image.style.tools
@@ -507,7 +835,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.responsive,
     detailImages: [image.style.responsive, image.style.performance],
-    blocks: blogBlocks("Clean layout"),
+    blocks: cleanLayoutBlocks,
     ctaLabel: "REDESIGN A PAGE",
     ctaHref: contactHref,
     closingImage: image.style.websiteDesign
@@ -525,7 +853,7 @@ export const blogs: BlogPost[] = [
     typeValue: "Stoyan Tanev",
     cover: image.style.tools,
     detailImages: [image.style.tools, image.style.uiux],
-    blocks: blogBlocks("Grid play"),
+    blocks: gridPlayBlocks,
     ctaLabel: "EXPLORE A GRID",
     ctaHref: contactHref,
     closingImage: image.style.blogUx

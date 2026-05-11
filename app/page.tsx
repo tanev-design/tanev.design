@@ -131,7 +131,7 @@ export default function Home() {
 
                 <div className="elite-intro__actions">
                   <a className="elite-pill" href="#contact" data-cursor="START">
-                    Let&apos;s talk
+                    Let&apos;s get in touch
                     <ArrowRight size={14} aria-hidden="true" />
                   </a>
                   <a className="elite-intro__text-link" href="#services">

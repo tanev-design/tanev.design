@@ -54,7 +54,8 @@ function useAppHeightLock() {
 }
 
 const HERO_PRELOAD_SRC = "/assets/mefacemask.svg";
-const PRELOADER_EXIT_MS = 1880;
+const PRELOADER_ENTRY_MS = 2400;
+const PRELOADER_EXIT_MS = 1200;
 
 function Preloader() {
   const [hidden, setHidden] = useState(false);
@@ -66,12 +67,19 @@ function Preloader() {
     let exitDelay = 0;
     let exitFrame = 0;
     let exitCommitFrame = 0;
+    const mountTime = performance.now();
 
     const finish = () => {
       if (cancelled) return;
       window.clearTimeout(fallback);
-      document.documentElement.classList.add("is-loaded");
-      window.setTimeout(() => setHidden(true), prefersReducedMotion() ? 120 : PRELOADER_EXIT_MS);
+      const elapsed = performance.now() - mountTime;
+      const minWait = prefersReducedMotion() ? 120 : PRELOADER_ENTRY_MS;
+      const remaining = Math.max(0, minWait - elapsed);
+      window.setTimeout(() => {
+        if (cancelled) return;
+        document.documentElement.classList.add("is-loaded");
+        window.setTimeout(() => setHidden(true), prefersReducedMotion() ? 120 : PRELOADER_EXIT_MS);
+      }, remaining);
     };
 
     const scheduleFinish = () => {
@@ -279,14 +287,6 @@ function useScrollScrubVideo(pathname: string) {
     let maxScroll = 1;
     let smoothedTime = 0;
     let cancelled = false;
-
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    if (!window.location.hash) {
-      window.scrollTo(0, 0);
-    }
 
     const measure = () => {
       const documentHeight = Math.max(
@@ -558,11 +558,11 @@ function useIntroSplitHighlight(pathname: string) {
         aria: "auto"
       });
       gsap.set(split.words, {
-        color: (_index, target) => (target.closest(".elite-intro__accent") ? "rgba(253, 73, 0, 0.18)" : "rgba(248, 248, 243, 0.18)"),
+        color: (_index, target) => (target.closest(".elite-intro__accent") ? "rgba(253, 73, 0, 0.18)" : "rgba(11, 11, 11, 0.18)"),
         opacity: 0.18
       });
       const tween = gsap.to(split.words, {
-        color: (_index, target) => (target.closest(".elite-intro__accent") ? "#fd4900" : "#f8f8f3"),
+        color: (_index, target) => (target.closest(".elite-intro__accent") ? "#fd4900" : "#0b0b0b"),
         opacity: 1,
         ease: "none",
         stagger: { each: 0.1, from: "start" },
@@ -620,12 +620,12 @@ function useWhySplitReveal(pathname: string) {
         splits.push(split);
 
         gsap.set(split.words, {
-          color: isTitle ? "rgba(248, 248, 243, 0.18)" : "rgba(248, 248, 243, 0.16)",
+          color: isTitle ? "rgba(11, 11, 11, 0.18)" : "rgba(11, 11, 11, 0.16)",
           opacity: 0.18
         });
 
         const tween = gsap.to(split.words, {
-          color: isTitle ? "#f8f8f3" : "rgba(248, 248, 243, 0.85)",
+          color: isTitle ? "#0b0b0b" : "rgba(11, 11, 11, 0.78)",
           opacity: 1,
           ease: "none",
           stagger: { each: isTitle ? 0.08 : 0.04, from: "start" },
@@ -810,6 +810,10 @@ function useScrollScenes(pathname: string) {
 export function ClientProviders({ children }: ClientProvidersProps) {
   const pathname = usePathname();
 
+  useEffect(() => {
+    document.documentElement.classList.add("is-loaded");
+  }, []);
+
   useAppHeightLock();
   useLenis();
   useScrollScrubVideo(pathname);
@@ -823,9 +827,7 @@ export function ClientProviders({ children }: ClientProvidersProps) {
 
   return (
     <>
-      <Preloader />
       <CustomCursor />
-      <div key={pathname} className="route-panel" aria-hidden="true" />
       {children}
       <ContactModal />
     </>

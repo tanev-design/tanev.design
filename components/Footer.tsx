@@ -19,7 +19,7 @@ export function Footer() {
             </div>
           </div>
           <a className="footer-giant footer-talk" href="#contact" data-contact-trigger data-cursor="CONTACT">
-            <HoverSwapText>{"LET'S TALK"}</HoverSwapText>
+            <HoverSwapText>{"LET'S GET IN TOUCH"}</HoverSwapText>
           </a>
         </div>
       </div>

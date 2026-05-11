@@ -62,7 +62,7 @@ function ParallaxRow({ item, index }: RowProps) {
           {item.title}
         </div>
         <p
-          className="text-white/70 mt-6 md:mt-10 text-base"
+          className="text-black/70 mt-6 md:mt-10 text-base"
           data-split-why="copy"
         >
           {item.description}

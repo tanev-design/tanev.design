@@ -51,46 +51,78 @@ export function DetailModal({ page, kind, origin, onClose }: DetailModalProps) {
     ? { opacity: 0 }
     : { opacity: 0, clipPath: `circle(0px at ${originPoint})` };
 
-  const renderDefaultContent = (activePage: DetailPage) => (
-    <>
-      <header className="detail-modal__hero">
-        <p className="elite-kicker">{kind}</p>
-        <h2 id="detail-modal-title">{activePage.title}</h2>
-        <p className="detail-modal__subtitle">{activePage.subtitle}</p>
-        <div className="detail-modal__meta">
-          <div>
-            <span>{activePage.categoryLabel}</span>
-            <strong>{activePage.categories.join(" / ")}</strong>
-          </div>
-          <div>
-            <span>{activePage.typeLabel}</span>
-            <strong>{activePage.typeValue}</strong>
-          </div>
-        </div>
-      </header>
+  const renderDefaultContent = (activePage: DetailPage) => {
+    const blog = activePage as DetailPage & { date?: string; readTime?: string };
+    const isBlog = kind === "Blog";
+    const formattedDate = blog.date
+      ? new Date(blog.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
+      : null;
 
-      <figure className="detail-modal__cover">
-        <Image
-          src={activePage.cover}
-          width={1600}
-          height={920}
-          alt={`${activePage.title} cover`}
-          sizes="(max-width: 900px) 92vw, 920px"
-        />
-      </figure>
-
-      {activePage.blocks.map((block) => (
-        <section className="detail-modal__block" key={block.eyebrow}>
-          <p className="elite-kicker">{block.eyebrow}</p>
-          <div>
-            {block.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+    return (
+      <>
+        <motion.header
+          className="detail-modal__hero"
+          initial={{ opacity: 0, y: reduceMotion ? 0 : 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: reduceMotion ? 0.16 : 0.5, ease: [0.2, 0.8, 0.2, 1] }}
+        >
+          <p className="elite-kicker">{kind}</p>
+          <h2 id="detail-modal-title">{activePage.title}</h2>
+          <p className="detail-modal__subtitle">{activePage.subtitle}</p>
+          <div className="detail-modal__meta">
+            <div>
+              <span>{activePage.categoryLabel}</span>
+              <strong>{activePage.categories.join(" / ")}</strong>
+            </div>
+            <div>
+              <span>{isBlog && formattedDate ? "Published" : activePage.typeLabel}</span>
+              <strong>
+                {isBlog && formattedDate
+                  ? `${formattedDate}${blog.readTime ? ` — ${blog.readTime} read` : ""}`
+                  : activePage.typeValue}
+              </strong>
+            </div>
           </div>
-        </section>
-      ))}
-    </>
-  );
+        </motion.header>
+
+        <motion.figure
+          className="detail-modal__cover"
+          initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: reduceMotion ? 0.16 : 0.6, ease: [0.2, 0.8, 0.2, 1], delay: reduceMotion ? 0 : 0.08 }}
+        >
+          <Image
+            src={activePage.cover}
+            width={1600}
+            height={920}
+            alt={`${activePage.title} cover`}
+            sizes="(max-width: 900px) 92vw, 920px"
+          />
+        </motion.figure>
+
+        {activePage.blocks.map((block, index) => (
+          <motion.section
+            className="detail-modal__block"
+            key={block.eyebrow}
+            initial={{ opacity: 0, y: reduceMotion ? 0 : 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: reduceMotion ? 0.16 : 0.46,
+              ease: [0.2, 0.8, 0.2, 1],
+              delay: reduceMotion ? 0 : 0.14 + index * 0.08
+            }}
+          >
+            <p className="elite-kicker">{block.eyebrow}</p>
+            <div>
+              {block.body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </motion.section>
+        ))}
+      </>
+    );
+  };
 
   const renderServiceContent = (activePage: DetailPage) => {
     const service = activePage as DetailPage & { deliverables?: string[]; summary?: string };
