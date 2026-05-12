@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { HoverSwapText } from "@/components/HoverSwapText";
 
 const socials = [
@@ -10,6 +11,17 @@ const socials = [
 export function Footer() {
   return (
     <footer id="contact" className="site-footer">
+      <div className="site-footer__art" aria-hidden="true">
+        <Image
+          src="/assets/bigfooter.png"
+          alt=""
+          fill
+          quality={100}
+          sizes="100vw"
+          priority={false}
+          className="site-footer__art-img"
+        />
+      </div>
       <div className="footer-opener page-shell">
         <div>
           <div className="eyebrow footer-rotate" role="text">
@@ -21,22 +33,22 @@ export function Footer() {
           <a className="footer-giant footer-talk" href="#contact" data-contact-trigger data-cursor="CONTACT">
             <HoverSwapText>{"LET'S GET IN TOUCH"}</HoverSwapText>
           </a>
+          <nav className="footer-socials" aria-label="Social links">
+            {socials.map(([label, href]) => (
+              <a href={href} key={label} target="_blank" rel="noreferrer" data-cursor="OPEN">
+                {label}
+              </a>
+            ))}
+            <button type="button" data-contact-trigger data-cursor="CONTACT">
+              MAIL
+            </button>
+          </nav>
         </div>
       </div>
 
       <div className="footer-bottom page-shell">
         <p>&copy;2026 TANEV.DESIGN</p>
         <a className="footer-back-to-top" href="#top" data-cursor="OPEN">BACK TO TOP</a>
-        <nav aria-label="Social links">
-          {socials.map(([label, href]) => (
-            <a href={href} key={label} target="_blank" rel="noreferrer" data-cursor="OPEN">
-              {label}
-            </a>
-          ))}
-          <button type="button" data-contact-trigger data-cursor="CONTACT">
-            MAIL
-          </button>
-        </nav>
       </div>
     </footer>
   );
