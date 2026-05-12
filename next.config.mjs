@@ -13,6 +13,10 @@ const nextConfig = {
         search: "?v=masked-hero-20260429"
       },
       {
+        pathname: "/assets/bigfooter.png",
+        search: "?v=2"
+      },
+      {
         pathname: "/assets/**",
         search: ""
       }

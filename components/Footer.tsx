@@ -13,12 +13,14 @@ export function Footer() {
     <footer id="contact" className="site-footer">
       <div className="site-footer__art" aria-hidden="true">
         <Image
-          src="/assets/bigfooter.png"
+          src="/assets/bigfooter.png?v=2"
           alt=""
           fill
           quality={100}
           sizes="100vw"
-          priority={false}
+          priority
+          fetchPriority="high"
+          decoding="sync"
           className="site-footer__art-img"
         />
       </div>

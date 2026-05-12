@@ -135,10 +135,6 @@ export default function Home() {
                     Let&apos;s get in touch
                     <ArrowRight size={14} aria-hidden="true" />
                   </a>
-                  <a className="elite-intro__text-link" href="#services">
-                    View work
-                    <span aria-hidden="true" />
-                  </a>
                 </div>
               </div>
             </div>

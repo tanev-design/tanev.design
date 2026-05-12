@@ -2984,7 +2984,12 @@ main,
   }
 
   .footer-bottom p {
-    transform: none;
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 32px);
+    transform: translateX(-50%);
+    padding-top: 0;
+    white-space: nowrap;
   }
 
   .footer-back-to-top {
@@ -4819,8 +4824,8 @@ body:has(.elite-page) main {
     inset: 9%;
   }
 
-  .cool-blob-effect .meta {
-    transform: scale(0.9);
+  .cool-blob-effect {
+    transform: scale(0.82);
   }
 
   .elite-work-grid,
@@ -4919,8 +4924,8 @@ body:has(.elite-page) main {
     inset-inline: 0;
   }
 
-  .cool-blob-effect .meta {
-    transform: scale(0.8);
+  .cool-blob-effect {
+    transform: scale(0.66);
   }
 
   .elite-intro__mockups {
