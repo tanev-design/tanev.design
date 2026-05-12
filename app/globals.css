@@ -3910,7 +3910,7 @@ body:has(.elite-page) main {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background: #000000;
+  background: transparent;
 }
 
 .cool-blob-effect .meta {
@@ -3919,7 +3919,7 @@ body:has(.elite-page) main {
   height: 300px;
   padding: 0;
   margin: 0;
-  background: #ffffff;
+  background: #000000;
   filter: contrast(20);
   animation: rotate 10s ease-in-out infinite alternate !important;
   will-change: transform;
@@ -3932,7 +3932,7 @@ body:has(.elite-page) main {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #000000;
+  background: #ffffff;
   filter: blur(20px);
   animation: move 2s ease-in-out infinite alternate !important;
   will-change: transform;
