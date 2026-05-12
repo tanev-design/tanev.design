@@ -10,6 +10,7 @@ import { DetailModal, type DetailKind } from "@/components/DetailModal";
 import { FAQ } from "@/components/FAQ";
 import { PortraitHero } from "@/components/PortraitHero";
 import { CapabilityMarquee } from "@/components/CapabilityMarquee";
+import { Component as CoolBlobEffect } from "@/components/ui/cool-blob-effect";
 import {
   ParallaxFeatureSection,
   ParallaxImage,
@@ -145,20 +146,7 @@ export default function Home() {
 
           <div className="elite-intro__visual reveal" aria-hidden="true">
             <div className="elite-intro__visual-frame">
-              <div className="elite-intro__mockups">
-                <div className="elite-intro__mockup elite-intro__mockup--one">
-                  <Image src="/assets/mok1.png" alt="" width={1200} height={820} draggable={false} />
-                </div>
-                <div className="elite-intro__mockup elite-intro__mockup--two">
-                  <Image src="/assets/mok2.png" alt="" width={1200} height={820} draggable={false} />
-                </div>
-                <div className="elite-intro__mockup elite-intro__mockup--three">
-                  <Image src="/assets/mok3.png" alt="" width={1200} height={820} draggable={false} />
-                </div>
-                <div className="elite-intro__mockup elite-intro__mockup--four">
-                  <Image src="/assets/mok4.png" alt="" width={1200} height={820} draggable={false} />
-                </div>
-              </div>
+              <CoolBlobEffect />
             </div>
           </div>
         </div>
