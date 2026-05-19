@@ -11,6 +11,7 @@ import { FAQ } from "@/components/FAQ";
 import { PortraitHero } from "@/components/PortraitHero";
 import { CapabilityMarquee } from "@/components/CapabilityMarquee";
 import { Component as CoolBlobEffect } from "@/components/ui/cool-blob-effect";
+import { InteractiveCards } from "@/components/InteractiveCards";
 import {
   ParallaxFeatureSection,
   ParallaxImage,
@@ -187,15 +188,7 @@ export default function Home() {
           <h2>The stack behind the finish.</h2>
         </div>
 
-        <figure className="elite-stack-media reveal">
-          <ParallaxImage
-            src={image.style.tools}
-            alt="Web design tools and technologies workspace"
-            width={1672}
-            height={941}
-            rounded={false}
-          />
-        </figure>
+        <InteractiveCards className="mb-12 sm:mb-16" />
 
         <div className="elite-experience__grid">
           {technicalStack.map((item) => (

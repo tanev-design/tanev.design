@@ -19,9 +19,9 @@ export default async function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#050607",
-          color: "#f7f4ed",
-          padding: 66,
+          background: "#e8e6e0",
+          color: "#111111",
+          padding: 0,
           fontFamily: "Inter, system-ui, sans-serif",
           position: "relative",
           overflow: "hidden"
@@ -38,14 +38,28 @@ export default async function OpenGraphImage() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover"
+            objectFit: "cover",
+            objectPosition: "28% 50%"
           }}
         />
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.36) 46%, rgba(0,0,0,0.08) 100%)",
+            background:
+              "linear-gradient(90deg, rgba(232,230,224,0.98) 0%, rgba(232,230,224,0.94) 34%, rgba(232,230,224,0.54) 52%, rgba(232,230,224,0.04) 78%)",
+            display: "flex"
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            width: 720,
+            height: "100%",
+            background:
+              "linear-gradient(90deg, rgba(232,230,224,0.78) 0%, rgba(232,230,224,0.64) 64%, rgba(232,230,224,0) 100%)",
             display: "flex"
           }}
         />
@@ -53,13 +67,15 @@ export default async function OpenGraphImage() {
         <div
           style={{
             position: "relative",
+            marginTop: 50,
+            marginLeft: 58,
             display: "flex",
             alignItems: "center",
             gap: 14,
-            fontSize: 22,
-            letterSpacing: 4,
+            fontSize: 19,
+            letterSpacing: 3.2,
             textTransform: "uppercase",
-            color: "rgba(247,244,237,0.76)"
+            color: "rgba(17,17,17,0.72)"
           }}
         >
           <div
@@ -79,31 +95,35 @@ export default async function OpenGraphImage() {
             position: "relative",
             display: "flex",
             flexDirection: "column",
-            gap: 18,
-            maxWidth: 980
+            justifyContent: "center",
+            gap: 20,
+            width: 560,
+            marginLeft: 58,
+            marginBottom: 36,
+            flex: 1
           }}
         >
           <div
             style={{
               display: "flex",
-              flexWrap: "wrap",
-              fontSize: 104,
+              flexDirection: "column",
+              fontSize: 76,
               fontWeight: 900,
-              lineHeight: 0.92,
-              letterSpacing: -3,
-              color: "#f7f4ed"
+              lineHeight: 0.94,
+              letterSpacing: -1.8,
+              color: "#111111"
             }}
           >
-            <span style={{ display: "flex" }}>Design&nbsp;</span>
+            <span style={{ display: "flex" }}>Design</span>
             <span style={{ display: "flex", color: "#fd4900" }}>that ships.</span>
           </div>
           <div
             style={{
               display: "flex",
-              fontSize: 30,
-              lineHeight: 1.3,
-              color: "rgba(247,244,237,0.82)",
-              maxWidth: 760
+              fontSize: 28,
+              lineHeight: 1.22,
+              color: "rgba(17,17,17,0.82)",
+              maxWidth: 500
             }}
           >
             Premium websites. One person. Every detail considered.
@@ -116,9 +136,11 @@ export default async function OpenGraphImage() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            fontSize: 22,
-            color: "rgba(247,244,237,0.68)",
-            letterSpacing: 1
+            width: "100%",
+            padding: "0 58px 46px",
+            fontSize: 18,
+            color: "rgba(17,17,17,0.6)",
+            letterSpacing: 1.6
           }}
         >
           <div style={{ display: "flex" }}>STOYAN TANEV</div>
